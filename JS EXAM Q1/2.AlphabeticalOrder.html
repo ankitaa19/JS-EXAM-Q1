@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrange String Alphabetically</title>
+
+
+</head>
+<body >
+  
+  <h1>Arrange String Alphabetically</h1>
+  <form id="arrange-string">
+    <input type="text" id="string-input" placeholder="Enter a string">
+    <button type="submit">Arrange</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    const form = document.getElementById('arrange-string');
+    const result = document.getElementById('result');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const str = document.getElementById('string-input').value;
+      const arrangedStr = str.split('').sort().join('');
+    
+      result.textContent = `The arranged string is: ${arrangedStr}`;
+    });
+  </script>
+</body>
+</html>
